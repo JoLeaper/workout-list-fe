@@ -1,5 +1,5 @@
 const { setWorkouts, setNewWorkout } = require('../actions/workoutActions');
-const { default: reducer } = require('./workoutsReducer');
+const { default: reducer } = require('./workoutReducer');
 
 describe('characters reducers', () => {
   it('handles the SET_WORKOUTS action', () => {

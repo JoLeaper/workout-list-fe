@@ -1,6 +1,9 @@
 import React from 'react';
+import WorkoutPage  from '../WorkoutPage/WorkoutPage';
 
-export default function App() {
-  return <h1>Hello World</h1>;
+export default function App() {  
+  return (
+    <WorkoutPage />
+  );
 }
   

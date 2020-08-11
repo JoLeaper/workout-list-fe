@@ -1,4 +1,8 @@
-import { setWorkouts, SET_WORKOUTS } from './workoutActions';
+import { 
+  setWorkouts, 
+  SET_WORKOUTS,
+  setNewWorkout,
+  SET_NEW_WORKOUT } from './workoutActions';
 
 describe('workout actions', () => {
   it('creates a SET_WORKOUTS action', () => {

@@ -1,3 +1,5 @@
+import { getWorkouts, getNewWorkout } from './workoutSelectors';
+
 describe('workout selectors', () => {
   it('grabs the workouts array from state', () => {
     const state = {

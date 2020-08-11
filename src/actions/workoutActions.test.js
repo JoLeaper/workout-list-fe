@@ -1,3 +1,5 @@
+import { setWorkouts, SET_WORKOUTS } from './workoutActions';
+
 describe('workout actions', () => {
   it('creates a SET_WORKOUTS action', () => {
     const action = setWorkouts([{

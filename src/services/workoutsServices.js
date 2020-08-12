@@ -1,11 +1,13 @@
+const backEndLink = 'http://localhost:7890/api/v1/workouts';
+
 export const fetchWorkouts = () => {
-  return fetch('http://localhost:7890/api/v1/workouts')
+  return fetch(backEndLink)
     .then(res => res.json());
 
 };
 
 export const postWorkout = (workout) => {
-  return fetch('http://localhost:7890/api/v1/workouts', {
+  return fetch(backEndLink, {
     method: 'POST',
     body: JSON.stringify(workout)
   });
@@ -13,14 +15,14 @@ export const postWorkout = (workout) => {
 
 
 export const deleteWorkout = (workout_id) => {
-  return fetch(`http://localhost:7890/api/v1/workouts/${workout_id}`, {
+  return fetch(`${backEndLink}${workout_id}`, {
     method: 'DELETE'
   });
 };
 
 
 export const updateWorkout = (workout) => {
-  return fetch(`http://localhost:7890/api/v1/workouts/${workout.id}`, {
+  return fetch(`${backEndLink}${workout.id}`, {
     method: 'PATCH',
     body: JSON.stringify(workout)
   });

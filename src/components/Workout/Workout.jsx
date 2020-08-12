@@ -15,7 +15,7 @@ Workout.propTypes = {
   muscles: PropTypes.string,
   description: PropTypes.string,
   reps: PropTypes.number,
-  weight: PropTypes.weight
+  weight: PropTypes.number
 };
 
 

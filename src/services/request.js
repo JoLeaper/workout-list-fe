@@ -1,7 +1,7 @@
 const NONBODY_METHODS = ['GET', 'DELETE'];
 
 const request = (path, method, body) => {
-  return fetch(`${process.env.API_URL}${path}`, {
+  return fetch(`http://localhost:7890${path}`, {
     method,
     headers: NONBODY_METHODS.includes(method) ? {} : { 'Content-Type': 'application/json' },
     credentials: 'include',

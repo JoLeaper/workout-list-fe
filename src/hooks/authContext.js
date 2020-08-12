@@ -12,7 +12,6 @@ export const useAuthLoading = () => {
   return authLoading;
 };
 
-
 export const useAuthError = () => {
   const { authError } = useContext(AuthContext);
   return authError;

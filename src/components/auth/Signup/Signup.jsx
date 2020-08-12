@@ -23,9 +23,9 @@ export default function Login() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="email" name="email" value={email} onChange={handleChange}/>
-        <input type="password" name='password' value={password} onChange={handleChange}/>
-        <input type="url" name='profileImage' value={profileImage} onChange={handleChange}/>
+        Email: <input type="email" name="email" value={email} onChange={handleChange}/>
+        password<input type="password" name='password' value={password} onChange={handleChange}/>
+        profile image<input type="url" name='profileImage' value={profileImage} onChange={handleChange}/>
         <button>Sign Up</button>
       </form>
     </div>

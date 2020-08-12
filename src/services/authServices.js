@@ -9,5 +9,5 @@ export const fetchLogin = (email, password) => {
 };
 
 export const fetchVerify = () => {
-  return get('/api/v1/auth/login');
+  return get('/api/v1/auth/verify');
 };

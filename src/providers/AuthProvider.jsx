@@ -21,7 +21,7 @@ export default function AuthProvider({ children }) {
     fetchVerify()
       .then(user => setCurrentUser(user))
       .finally(() => setAuthLoading(false));
-  });
+  }, []);
   return (
     <AuthContext.Provider value={{ currentUser, authLoading, authError, signup, login }}>
       {children}

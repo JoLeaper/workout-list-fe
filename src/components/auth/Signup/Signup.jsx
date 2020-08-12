@@ -22,7 +22,7 @@ export default function Login() {
   };
   return (
     <div>
-      <form handleSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input type="email" name="email" value={email} onChange={handleChange}/>
         <input type="password" name='password' value={password} onChange={handleChange}/>
         <input type="url" name='profileImage' value={profileImage} onChange={handleChange}/>

@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import App from './components/App/App';
 import { Provider } from 'react-redux';
-import { AuthProvider } from './hooks/authContext';
+import AuthProvider from './providers/AuthProvider';
 import store from './store';
 
 render(

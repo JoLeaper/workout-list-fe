@@ -9,7 +9,7 @@ import Header from '../Header/Header';
 import Signup from '../auth/Login/Login';
 import Login from '../auth/Login/Login';
 // import Dashboard from '../dashboard/Dashboard.jsx';
-import PrivateRoute from '../auth/PrivateRoute';
+import PrivateRoute from '../auth/PrivateRoute/PrivateRoute';
 
 export default function App() {  
   return (

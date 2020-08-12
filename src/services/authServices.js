@@ -1,5 +1,3 @@
-const backEndLink = 'http://localhost:7890/api/v1/auth';
-
 export const fetchSignup = () => {
   return fetch(`${backEndLink}/signup`)
     .then(res => res.json());
@@ -14,7 +12,5 @@ export const fetchLogin = () => {
 };
 
 export const fetchVerify = () => {
-  return fetch(`${backEndLink}/verify`, {
-    method: 'DELETE'
-  });
+  return fetch(`${backEndLink}/verify`);
 };

@@ -18,12 +18,10 @@ export const useAuthError = () => {
   return authError;
 };
 
-
 export const useSignup = () => {
   const { signup } = useContext(AuthContext);
   return signup;
 };
-
 
 export const useLogin = () => {
   const { login } = useContext(AuthContext);

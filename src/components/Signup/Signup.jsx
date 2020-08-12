@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSignup } from '../../hooks/authContext';
 import { useHistory } from 'react-router-dom';
 
-export default function Signup() {
+export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [profileImage, setProfileImage] = useState('');
@@ -17,15 +17,15 @@ export default function Signup() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const signup = useSignup();
-    signup(email, password, profileImage);
+    signup(email, password, profileImage)
+      .then(() => history.push('/dashboard'));
   };
   return (
     <div>
       <form handleSubmit={handleSubmit}>
-        <input name='email' onChange={handleChange}/>
-        <input name='password' onChange={handleChange}/>
-        <input name='profileImage' onChange={handleChange}/>
+        <input type="email" name="email" value={email} onChange={handleChange}/>
+        <input type="password" name='password' value={password} onChange={handleChange}/>
+        <input type="url" name='profileImage' value={profileImage} onChange={handleChange}/>
         <button>Sign Up</button>
       </form>
     </div>

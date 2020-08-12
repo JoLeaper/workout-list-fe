@@ -1,9 +1,28 @@
 import React from 'react';
 import WorkoutPage  from '../WorkoutPage/WorkoutPage';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import Header from '../Header/Header';
+import Signup from '../auth/Login/Login';
+import Login from '../auth/Login/Login';
+// import Dashboard from '../dashboard/Dashboard.jsx';
+import PrivateRoute from '../auth/PrivateRoute';
 
 export default function App() {  
   return (
-    <WorkoutPage />
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/signup" component={Signup} />
+        <Route path="/login" component={Login} />
+        <PrivateRoute path="/workouts" component={WorkoutPage}/>
+      </Switch>    
+
+    </Router>
+
   );
 }
   

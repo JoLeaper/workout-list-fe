@@ -18,7 +18,7 @@ export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     signup(email, password, profileImage)
-      .then(() => history.push('/dashboard'));
+      .then(() => history.push('/workouts'));
   };
   return (
     <div>

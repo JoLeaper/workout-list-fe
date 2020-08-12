@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLogin } from '../../hooks/authContext';
+import { useLogin } from '../../../hooks/authContext';
 import { useHistory } from 'react-router-dom';
 
 export default function Login() {
@@ -16,7 +16,7 @@ export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     login(email, password)
-      .then(() => history.push('/dashboard'));
+      .then(() => history.push('/workouts'));
   };
   return (
     <div>

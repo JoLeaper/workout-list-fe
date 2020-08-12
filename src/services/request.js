@@ -1,4 +1,4 @@
-const NONBODY_METHODS = ['GET', DELETE];
+const NONBODY_METHODS = ['GET', 'DELETE'];
 
 const request = (path, method, body) => {
   return fetch(`${process.env.API_URL}${path}`, {
@@ -13,3 +13,8 @@ const request = (path, method, body) => {
       return json;
     });
 };
+
+export const post = (path, body) => request(path, 'POST', body);
+export const get = path => request(path, 'GET');
+export const put = (path, body) => (path, 'PUT', body);
+export const del = path => request(path, 'DELETE');
